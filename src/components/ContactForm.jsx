@@ -11,12 +11,10 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
 
-  // handle input
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // validation
   const validate = () => {
     let newErrors = {};
     const namePattern = /^[a-zA-Z\s'-]+$/;
@@ -39,18 +37,16 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!validate()) return;
 
     emailjs
       .send(
-        "service_uye8cf2",        // your service ID
-        "template_jitw5wm",       // your template ID
+        "service_uye8cf2",
+        "template_jitw5wm",
         formData,
-        "rfuFFYZhu0_J3KVCq"       // your public key
+        "rfuFFYZhu0_J3KVCq"
       )
       .then(() => {
         alert("Message sent successfully!");
@@ -62,67 +58,113 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="w-full">
 
-      <h2 style={{ color: "rgb(53, 53, 158)" }}>Get In Touch….</h2>
-      <p>
-        or reach out to
-        <a href="https://wa.me/917034165867" target="_blank" rel="noreferrer">
-          <i className="fab fa-whatsapp" style={{ color: "green", marginLeft: "5px" }}></i>
+      {/* header */}
+      <h2 className="text-2xl font-bold text-blue-700 mb-2">
+        Get In Touch…
+      </h2>
+
+      <p className="text-gray-700 mb-6">
+        or reach out to{" "}
+        <a 
+          href="https://wa.me/917034165867" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-green-600 font-semibold ml-1"
+        >
+          WhatsApp
         </a>{" "}
-        /
+        / 
         <a
-          href="mailto:yoginyogainfo@gmail.com"
+          href="mailto:plantifyinfo@gmail.com"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "rgb(53, 53, 158)", marginLeft: "5px" }}
+          className="text-blue-700 font-semibold ml-1"
         >
-          <i className="fa fa-envelope"></i> yoginyogainfo@gmail.com
+          plantifyinfo@gmail.com
         </a>
       </p>
 
-      <form onSubmit={handleSubmit} className="contact-form-react">
+      {/* form */}
+      <form onSubmit={handleSubmit} className="space-y-5">
 
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter Your Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <span className="error">{errors.name}</span>
+        {/* name input */}
+        <div className="flex flex-col">
+          <label className="text-gray-700 font-medium mb-1">Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          {errors.name && (
+            <span className="text-red-600 text-sm mt-1">{errors.name}</span>
+          )}
+        </div>
 
-        <label>Email Address</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your Email Address"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <span className="error">{errors.email}</span>
+        {/* email input */}
+        <div className="flex flex-col">
+          <label className="text-gray-700 font-medium mb-1">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          {errors.email && (
+            <span className="text-red-600 text-sm mt-1">{errors.email}</span>
+          )}
+        </div>
 
-        <label>Phone Number</label>
-        <input
-          type="number"
-          name="phone"
-          placeholder="Enter Your Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        <span className="error">{errors.phone}</span>
+        {/* phone input */}
+        <div className="flex flex-col">
+          <label className="text-gray-700 font-medium mb-1">Phone Number</label>
+          <input
+            type="number"
+            name="phone"
+            placeholder="Enter Your Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          {errors.phone && (
+            <span className="text-red-600 text-sm mt-1">{errors.phone}</span>
+          )}
+        </div>
 
-        <label>Message</label>
-        <textarea
-          name="message"
-          placeholder="For More Details Enter Your Message To Us Here..."
-          value={formData.message}
-          onChange={handleChange}
-        ></textarea>
-        <span className="error">{errors.message}</span>
+        {/* message textarea */}
+        <div className="flex flex-col">
+          <label className="text-gray-700 font-medium mb-1">Message</label>
+          <textarea
+            name="message"
+            placeholder="For More Details Enter Your Message To Us Here..."
+            value={formData.message}
+            onChange={handleChange}
+            rows="4"
+            className="px-4 py-3 border border-gray-300 rounded-lg 
+                       focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+          ></textarea>
+          {errors.message && (
+            <span className="text-red-600 text-sm mt-1">{errors.message}</span>
+          )}
+        </div>
 
-        <button type="submit">Submit</button>
+        {/* submit button */}
+        <button
+          type="submit"
+          className="w-full bg-blue-700 text-white font-semibold py-3 rounded-lg 
+                     hover:bg-blue-500 transition shadow-md"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

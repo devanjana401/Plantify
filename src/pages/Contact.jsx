@@ -3,26 +3,37 @@ import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="contact-page">
+    <div className="w-full flex flex-col">
 
-      <section className="bg-section">
-        <img src="/assets/images/about/mainabout.jpg" alt="" />
+      {/* header */}
+      <section className="w-full h-12 md:h-50 overflow-hidden relative">
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-bold tracking-wide underline underline-offset-8">
+            Contact Us
+          </h1>
+        </div>
       </section>
 
-      <div className="contact-wrapper">
+      {/* wrapper */}
+      <div className="w-full max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.0367377812945!2d75.7787664748123!3d11.258707788920916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b2db706f6c3%3A0x88e33c099158e5f6!2sTECHOLAS%20TECHNOLOGIES%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1762016571290!5m2!1sen!2sin"
-          width="800"
-          height="750"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+        {/* iframe */}
+        <div className="w-full shadow-xl rounded-xl overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.0367377812945!2d75.7787664748123!3d11.258707788920916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b2db706f6c3%3A0x88e33c099158e5f6!2sTECHOLAS%20TECHNOLOGIES%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1762016571290!5m2!1sen!2sin"
+            className="w-full h-full"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
 
-        <ContactForm />
+        {/* contactform */}
+        <div className=" w-full bg-white shadow-xl rounded-xl p-6 md:p-8">
+          <ContactForm />
+        </div>
+
       </div>
-
     </div>
   );
 };
