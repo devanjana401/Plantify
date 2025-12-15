@@ -1,0 +1,120 @@
+{
+  "products": [
+    {
+      "id": "prod_101",
+      "name": "Red Rose Plant",
+      "category_id": "cat_plants",
+      "subcategory_id": "sub_flowers",
+      "category_url": "/plants",
+      "subcategory_url": "/plants/flower-plants",
+      "price": 12.99,
+      "offer_price": 10.99,
+      "main_image": "/images/products/rose-plant.jpg",
+      "hover_image": "/images/products/rose-plant-hover.jpg",
+      "gallery_images": [
+        "/images/products/rose-plant-1.jpg",
+        "/images/products/rose-plant-2.jpg"
+      ],
+      "description": "Beautiful red rose plant, perfect for gardens and gifting.",
+      "in_stock": true,
+      "stock_count": 85,
+      "rating": 4.5,
+      "reviews_count": 128,
+      "is_featured": true,
+      "is_public": true,
+      "product_url": "/product/red-rose-plant"
+    },
+    {
+      "id": "prod_102",
+      "name": "Lemon Tree",
+      "category_id": "cat_plants",
+      "subcategory_id": "sub_fruits",
+      "category_url": "/plants",
+      "subcategory_url": "/plants/fruit-plants",
+      "price": 24.99,
+      "offer_price": 21.99,
+      "main_image": "/images/products/lemon-tree.jpg",
+      "hover_image": "/images/products/lemon-tree-hover.jpg",
+      "gallery_images": [
+        "/images/products/lemon-tree-1.jpg"
+      ],
+      "description": "Dwarf lemon tree that produces aromatic fruits year-round.",
+      "in_stock": true,
+      "stock_count": 45,
+      "rating": 4.7,
+      "reviews_count": 96,
+      "is_featured": true,
+      "is_public": true,
+      "product_url": "/product/lemon-tree"
+    },
+    {
+      "id": "prod_103",
+      "name": "Tulsi Plant",
+      "category_id": "cat_plants",
+      "subcategory_id": "sub_herbs",
+      "category_url": "/plants",
+      "subcategory_url": "/plants/herbal-plants",
+      "price": 8.99,
+      "offer_price": 7.49,
+      "main_image": "/images/products/tulsi-plant.jpg",
+      "hover_image": "/images/products/tulsi-plant-hover.jpg",
+      "gallery_images": [
+        "/images/products/tulsi-plant-1.jpg"
+      ],
+      "description": "Holy basil plant with medicinal properties, easy to grow.",
+      "in_stock": true,
+      "stock_count": 200,
+      "rating": 4.8,
+      "reviews_count": 156,
+      "is_featured": false,
+      "is_public": true,
+      "product_url": "/product/tulsi-plant"
+    },
+    {
+      "id": "prod_104",
+      "name": "Snake Plant",
+      "category_id": "cat_plants",
+      "subcategory_id": "sub_indoor",
+      "category_url": "/plants",
+      "subcategory_url": "/plants/indoor-plants",
+      "price": 14.99,
+      "offer_price": 12.99,
+      "main_image": "/images/products/snake-plant.jpg",
+      "hover_image": "/images/products/snake-plant-hover.jpg",
+      "gallery_images": [
+        "/images/products/snake-plant-1.jpg"
+      ],
+      "description": "Air purifying indoor plant, requires minimal care.",
+      "in_stock": true,
+      "stock_count": 120,
+      "rating": 4.4,
+      "reviews_count": 89,
+      "is_featured": false,
+      "is_public": true,
+      "product_url": "/product/snake-plant"
+    },
+    {
+      "id": "prod_105",
+      "name": "Tomato Plant",
+      "category_id": "cat_plants",
+      "subcategory_id": "sub_vegetables",
+      "category_url": "/plants",
+      "subcategory_url": "/plants/vegetable-plants",
+      "price": 9.99,
+      "offer_price": 8.49,
+      "main_image": "/images/products/tomato-plant.jpg",
+      "hover_image": "/images/products/tomato-plant-hover.jpg",
+      "gallery_images": [
+        "/images/products/tomato-plant-1.jpg"
+      ],
+      "description": "Ready to plant tomato sapling for kitchen garden.",
+      "in_stock": true,
+      "stock_count": 150,
+      "rating": 4.6,
+      "reviews_count": 134,
+      "is_featured": false,
+      "is_public": true,
+      "product_url": "/product/tomato-plant"
+    }
+  ]
+}

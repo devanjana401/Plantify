@@ -1,0 +1,114 @@
+{
+  "subcategories": [
+    {
+      "id": "sub_flowers",
+      "category_id": "cat_plants",
+      "name": "Flower Plants",
+      "slug": "flower-plants",
+      "description": "Beautiful flowering plants",
+      "image": "/images/subcategories/flowers.jpg",
+      "nav_url": "/plants/flower-plants",
+      "is_active": true,
+      "order": 1
+    },
+    {
+      "id": "sub_fruits",
+      "category_id": "cat_plants",
+      "name": "Fruit Plants",
+      "slug": "fruit-plants",
+      "description": "Plants that bear delicious fruits",
+      "image": "/images/subcategories/fruits.jpg",
+      "nav_url": "/plants/fruit-plants",
+      "is_active": true,
+      "order": 2
+    },
+    {
+      "id": "sub_herbs",
+      "category_id": "cat_plants",
+      "name": "Herbal Plants",
+      "slug": "herbal-plants",
+      "description": "Medicinal and culinary herbs",
+      "image": "/images/subcategories/herbs.jpg",
+      "nav_url": "/plants/herbal-plants",
+      "is_active": true,
+      "order": 3
+    },
+    {
+      "id": "sub_indoor",
+      "category_id": "cat_plants",
+      "name": "Indoor Plants",
+      "slug": "indoor-plants",
+      "description": "Plants perfect for indoor spaces",
+      "image": "/images/subcategories/indoor.jpg",
+      "nav_url": "/plants/indoor-plants",
+      "is_active": true,
+      "order": 4
+    },
+    {
+      "id": "sub_vegetables",
+      "category_id": "cat_plants",
+      "name": "Vegetable Plants",
+      "slug": "vegetable-plants",
+      "description": "Plants for your kitchen garden",
+      "image": "/images/subcategories/vegetables.jpg",
+      "nav_url": "/plants/vegetable-plants",
+      "is_active": true,
+      "order": 5
+    },
+    {
+      "id": "sub_planters",
+      "category_id": "cat_gardening",
+      "name": "Planters & Pots",
+      "slug": "planters-pots",
+      "description": "Containers and pots for plants",
+      "image": "/images/subcategories/planters.jpg",
+      "nav_url": "/gardening/planters-pots",
+      "is_active": true,
+      "order": 1
+    },
+    {
+      "id": "sub_seeds",
+      "category_id": "cat_gardening",
+      "name": "Seeds & Bulbs",
+      "slug": "seeds-bulbs",
+      "description": "Seeds and bulbs for planting",
+      "image": "/images/subcategories/seeds.jpg",
+      "nav_url": "/gardening/seeds-bulbs",
+      "is_active": true,
+      "order": 2
+    },
+    {
+      "id": "sub_tools",
+      "category_id": "cat_gardening",
+      "name": "Gardening Tools",
+      "slug": "gardening-tools",
+      "description": "Essential gardening tools",
+      "image": "/images/subcategories/tools.jpg",
+      "nav_url": "/gardening/tools",
+      "is_active": true,
+      "order": 3
+    },
+    {
+      "id": "sub_fertilizers",
+      "category_id": "cat_gardening",
+      "name": "Fertilizers",
+      "slug": "fertilizers",
+      "description": "Plant nutrients and fertilizers",
+      "image": "/images/subcategories/fertilizers.jpg",
+      "nav_url": "/gardening/fertilizers",
+      "is_active": true,
+      "order": 4
+    },
+    {
+      "id": "sub_soil",
+      "category_id": "cat_gardening",
+      "name": "Soil & Compost",
+      "slug": "soil-compost",
+      "description": "Planting soil and compost",
+      "image": "/images/subcategories/soil.jpg",
+      "nav_url": "/gardening/soil-compost",
+      "is_active": true,
+      "order": 5
+    }
+  ]
+}

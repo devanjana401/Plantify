@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import AppNavbar from "../components/Appnavbar";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -62,7 +63,6 @@ const Signin = () => {
 
   return (
     <div className="px-10 py-10 min-h-[500px]">
-
       {/* header */}
       <h2 className="text-center font-semibold text-[35px] text-gray-500 underline underline-offset-8">
         Sign In

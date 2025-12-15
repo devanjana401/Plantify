@@ -127,7 +127,7 @@ const ContactForm = () => {
         <div className="flex flex-col">
           <label className="text-gray-700 font-medium mb-1">Phone Number</label>
           <input
-            type="number"
+            type="text"
             name="phone"
             placeholder="Enter Your Phone Number"
             value={formData.phone}

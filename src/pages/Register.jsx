@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AppNavbar from "../components/Appnavbar";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,7 +26,6 @@ const Register = () => {
 
   return (
     <div className="px-10 py-10 min-h-[500px]">
-
       {/* header */}
       <h2 className="text-center font-semibold text-4xl text-gray-500 underline underline-offset-8">
         Register

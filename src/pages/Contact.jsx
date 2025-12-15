@@ -1,14 +1,14 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
+import AppNavbar from "../components/Appnavbar";
 
 const Contact = () => {
   return (
     <div className="w-full flex flex-col">
-
       {/* header */}
-      <section className="w-full h-12 md:h-50 overflow-hidden relative">
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold tracking-wide underline underline-offset-8">
+      <section className="w-full h-8 md:h-20 overflow-hidden relative">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-black text-4xl md:text-5xl underline underline-offset-8" style={{fontWeight:'200'}}>
             Contact Us
           </h1>
         </div>

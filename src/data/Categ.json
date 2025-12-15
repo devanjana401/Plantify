@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": "cat_plants",
+      "name": "Home",
+      "slug": "Home",
+      "description": "All types of plants for your garden",
+      "image": "/images/categories/plants.jpg",
+      "nav_url": "/home",
+      "is_active": true,
+      "order": 1
+    },
+    {
+      "id": "cat_plants",
+      "name": "Plants",
+      "slug": "plants",
+      "description": "All types of plants for your garden",
+      "image": "/images/categories/plants.jpg",
+      "nav_url": "/plants",
+      "is_active": true,
+      "order": 1
+    },
+    {
+      "id": "cat_gardening",
+      "name": "Gardening",
+      "slug": "gardening",
+      "description": "Gardening tools and accessories",
+      "image": "/images/categories/gardening.jpg",
+      "nav_url": "/gardening",
+      "is_active": true,
+      "order": 2
+    }
+  ]
+}
