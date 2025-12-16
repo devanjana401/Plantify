@@ -1,9 +1,9 @@
 import React from 'react'
-import AppNavbar from '../components/Appnavbar'
 
-function About() {
+const About = () => {
   return (
     <div>
+      
     </div>
   )
 }

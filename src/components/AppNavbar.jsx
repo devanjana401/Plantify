@@ -7,11 +7,15 @@ import Button from "react-bootstrap/Button";
 // bootstrap icons
 import { BsSearch, BsHeart, BsCart, BsPerson } from "react-icons/bs";
 
-function AppNavbar() {
+const AppNavbar = () => {
   return (
-    <Navbar expand="lg" bg="light" variant="light" style={{ height: "80px" }}>
+    <Navbar
+      expand="lg"
+      bg="light"
+      variant="light"
+      style={{ height: "80px", zIndex: 1050 }}
+    >
       <Container fluid>
-        
         {/* logo + name */}
         <Navbar.Brand href="/" className="d-flex align-items-center ml-10">
           <img
@@ -28,8 +32,7 @@ function AppNavbar() {
 
         <Navbar.Toggle aria-controls="navbar-content" />
 
-        <Navbar.Collapse id="navbar-content">
-
+        <Navbar.Collapse id="navbar-content" style={{ background: "white" }}>
           {/* menu items */}
           <Nav className="mx-auto align-items-center gap-3 text-2xl">
             <Nav.Link href="/">Home</Nav.Link>
@@ -43,19 +46,22 @@ function AppNavbar() {
               <NavDropdown.Item href="/plants/herbal">Herbal</NavDropdown.Item>
               <NavDropdown.Item href="/plants/indoor">Indoor</NavDropdown.Item>
               <NavDropdown.Item href="/plants/tree">Trees</NavDropdown.Item>
-              <NavDropdown.Item href="/plants/vegetables">Vegetables</NavDropdown.Item>
+              <NavDropdown.Item href="/plants/vegetables">
+                Vegetables
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Gardening Kit" id="kit-dropdown">
               <NavDropdown.Item href="/kit/tools">Tools</NavDropdown.Item>
               <NavDropdown.Item href="/kit/pots">Pots</NavDropdown.Item>
               <NavDropdown.Item href="/kit/soil">Soil</NavDropdown.Item>
-              <NavDropdown.Item href="/kit/fertilizer">Fertilizer</NavDropdown.Item>
+              <NavDropdown.Item href="/kit/fertilizer">
+                Fertilizer
+              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
-
 
           <Nav className="align-items-center gap-3">
             {/* search */}
@@ -71,15 +77,20 @@ function AppNavbar() {
             </Form>
 
             {/* icons */}
-            <Nav.Link href="/favourites"><BsHeart size={24} /></Nav.Link>
-            <Nav.Link href="/cart"><BsCart size={24} /></Nav.Link>
-            <Nav.Link href="/profile"><BsPerson size={24} /></Nav.Link>
+            <Nav.Link href="/favourites">
+              <BsHeart size={24} />
+            </Nav.Link>
+            <Nav.Link href="/cart">
+              <BsCart size={24} />
+            </Nav.Link>
+            <Nav.Link href="/profile">
+              <BsPerson size={24} />
+            </Nav.Link>
           </Nav>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default AppNavbar;

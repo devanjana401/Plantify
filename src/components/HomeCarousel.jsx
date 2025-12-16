@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 
-function HomeCarousel() {
+const HomeCarousel = () => {
   return (
     <Carousel>
       <Carousel.Item>
@@ -8,11 +8,13 @@ function HomeCarousel() {
           className="d-block w-100"
           src="/banners/banner1.jpg"
           alt="Slide 1"
-          style={{ height: "400px",objectFit:"cover"}}
+          style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{fontSize:"50px"}}>Grow Joy This Christmas🎄</h2>
-          <p style={{fontSize:"30px"}}>Up to 30% OFF on Plants & Gardening Kits</p>
+          <h2 style={{ fontSize: "50px" }}>Grow Joy This Christmas🎄</h2>
+          <p style={{ fontSize: "30px" }}>
+            Up to 30% OFF on Plants & Gardening Kits
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -24,8 +26,10 @@ function HomeCarousel() {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{fontSize:"50px"}}>Grow With Plantify</h2>
-          <p style={{fontSize:"30px"}}>Indoor • Flowers • Herbal •Fruits</p>
+          <h2 style={{ fontSize: "50px" }}>Grow With Plantify</h2>
+          <p style={{ fontSize: "30px" }}>
+            Indoor • Flowers • Herbal • Fruits
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -37,12 +41,14 @@ function HomeCarousel() {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{fontSize:"50px"}}>Gardening Made Easy</h2>
-          <p style={{fontSize:"30px"}}>Everything you need in one place</p>
+          <h2 style={{ fontSize: "50px" }}>Gardening Made Easy</h2>
+          <p style={{ fontSize: "30px" }}>
+            Everything you need in one place
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
-}
+};
 
 export default HomeCarousel;
