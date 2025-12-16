@@ -18,7 +18,7 @@
     "image2": "/plantsImages/aquatic/sedoides2.webp",
     "oldPrice": 150,
     "price": 100,
-    "rating": 4.2,
+    "rating": 3,
     "description": "Low-maintenance floating aquatic plant suitable for small ponds."
   },
   {
@@ -36,7 +36,7 @@
     "id": 4,
     "name": "White Lotus",
     "category": "aquatic",
-    "image": "/plantsImages/aquatic/whitelotus1.webp",
+    "image": "/plantsImages/aquatic/whitelotus.webp",
     "image2": "/plantsImages/aquatic/whitelotus2.webp",
     "oldPrice": 180,
     "price": 140,
@@ -47,9 +47,9 @@
   {
     "id": 5,
     "name": "Bougainvillea",
-    "category": "flowers",
-    "image": "/plantsImages/flower/Bougainvillea1.webp",
-    "image2": "/plantsImages/flower/Bougainvillea2.webp",
+    "category": "flower",
+    "image": "/plantsImages/flower/bougainvillea1.webp",
+    "image2": "/plantsImages/flower/bougainvillea2.webp",
     "oldPrice": 200,
     "price": 160,
     "rating": 4.4,
@@ -58,18 +58,18 @@
   {
     "id": 6,
     "name": "Hibiscus",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/hibiscus1.webp",
     "image2": "/plantsImages/flower/hibiscus2.webp",
     "oldPrice": 100,
     "price": 50,
-    "rating": 4.3,
+    "rating": 3,
     "description": "Popular tropical flower plant known for large colorful blooms."
   },
   {
     "id": 7,
     "name": "Hibiscus Orange",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/hibiscusorange1.webp",
     "image2": "/plantsImages/flower/hibiscusorange2.webp",
     "oldPrice": 100,
@@ -80,7 +80,7 @@
   {
     "id": 8,
     "name": "Hibiscus Pink",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/hibiscuspink1.webp",
     "image2": "/plantsImages/flower/hibiscuspink2.webp",
     "oldPrice": 100,
@@ -91,7 +91,7 @@
   {
     "id": 9,
     "name": "Ixora",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/ixora1.webp",
     "image2": "/plantsImages/flower/ixora2.webp",
     "oldPrice": 80,
@@ -102,7 +102,7 @@
   {
     "id": 10,
     "name": "Jasmine",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/jasmine1.webp",
     "image2": "/plantsImages/flower/jasmine2.webp",
     "oldPrice": 300,
@@ -113,7 +113,7 @@
   {
     "id": 11,
     "name": "Parijatham",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/parijatham1.webp",
     "image2": "/plantsImages/flower/parijatham2.webp",
     "oldPrice": 260,
@@ -124,7 +124,7 @@
   {
     "id": 12,
     "name": "Rose",
-    "category": "flowers",
+    "category": "flower",
     "image": "/plantsImages/flower/rose1.webp",
     "image2": "/plantsImages/flower/rose2.webp",
     "oldPrice": 300,
@@ -136,7 +136,7 @@
   {
     "id": 13,
     "name": "Amla",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/amla1.webp",
     "image2": "/plantsImages/fruit/amla2.webp",
     "oldPrice": 200,
@@ -147,7 +147,7 @@
   {
     "id": 14,
     "name": "Cherry",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/cherry1.webp",
     "image2": "/plantsImages/fruit/cherry2.webp",
     "oldPrice": 100,
@@ -158,7 +158,7 @@
   {
     "id": 15,
     "name": "Custard",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/custard1.webp",
     "image2": "/plantsImages/fruit/custard2.webp",
     "oldPrice": 100,
@@ -169,9 +169,9 @@
   {
     "id": 16,
     "name": "Guava",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/guava1.webp",
-    "image2": "/plantsImages/fruit/guava.webp",
+    "image2": "/plantsImages/fruit/guava2.webp",
     "oldPrice": 100,
     "price": 80,
     "rating": 4.4,
@@ -180,7 +180,7 @@
   {
     "id": 17,
     "name": "Lemon",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/lemon1.webp",
     "image2": "/plantsImages/fruit/lemon2.webp",
     "oldPrice": 80,
@@ -191,7 +191,7 @@
   {
     "id": 18,
     "name": "Sapota",
-    "category": "fruits",
+    "category": "fruit",
     "image": "/plantsImages/fruit/sapota1.webp",
     "image2": "/plantsImages/fruit/sapota2.webp",
     "oldPrice": 300,
@@ -329,7 +329,7 @@
     "id": 30,
     "name": "Turmeric",
     "category": "herbal",
-    "image": "/plantsImages/herbal/turmeric.webp",
+    "image": "/plantsImages/herbal/turmeric.jpg",
     "oldPrice": 100,
     "price": 80,
     "rating": 4.6,
@@ -469,7 +469,7 @@
   "id": 44,
   "name": "Chilli",
   "category": "vegetables",
-  "image": "/plantsImages/vegetables/chilli.webp",
+  "image": "/plantsImages/vegetables/chilli.jpg",
   "oldPrice": 100,
   "price": 80,
   "rating": 4.4,
@@ -492,7 +492,7 @@
   "image": "/plantsImages/vegetables/sweetpotato.jpg",
   "oldPrice": 100,
   "price": 80,
-  "rating": 4.2,
+  "rating": 3,
   "description": "Root vegetable plant known for its sweet and nutritious tubers."
 },
 {

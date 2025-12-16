@@ -9,6 +9,7 @@ import AppNavbar from './components/Appnavbar';
 import Footer from './components/Footer';
 import Plants from './pages/Plants';
 import GardeningKit from './pages/GardeningKit';
+import PlantDetails from './components/PlantDetails';
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="about" element={<About/>}/>
         <Route path="plants" element={<Plants/>}/>
+        <Route path="plants/:category?" element={<Plants />} />
+        <Route path="/plant/:id" element={<PlantDetails/>} />
         <Route path="gardeningkit" element={<GardeningKit/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/signin" element={<Signin/>}/>

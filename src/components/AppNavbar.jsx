@@ -54,7 +54,6 @@ const AppNavbar = () => {
             <NavDropdown title="Gardening Kit" id="kit-dropdown">
               <NavDropdown.Item href="/kit/tools">Tools</NavDropdown.Item>
               <NavDropdown.Item href="/kit/pots">Pots</NavDropdown.Item>
-              <NavDropdown.Item href="/kit/soil">Soil</NavDropdown.Item>
               <NavDropdown.Item href="/kit/fertilizer">
                 Fertilizer
               </NavDropdown.Item>
