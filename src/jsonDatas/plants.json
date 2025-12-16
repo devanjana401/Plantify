@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1,
+    "name": "Pink Lotus",
+    "category": "aquatic",
+    "image": "/plantsImages/aquatic/pinklotus1.webp",
+    "image2": "/plantsImages/aquatic/pinklotus2.jpg",
+    "oldPrice": 200,
+    "price": 160,
+    "rating": 4.6,
+    "description": "Sacred aquatic plant with large pink flowers, ideal for ponds and water gardens."
+  },
+  {
+    "id": 2,
+    "name": "Sedoides",
+    "category": "aquatic",
+    "image": "/plantsImages/aquatic/sedoides1.webp",
+    "image2": "/plantsImages/aquatic/sedoides2.webp",
+    "oldPrice": 150,
+    "price": 100,
+    "rating": 4.2,
+    "description": "Low-maintenance floating aquatic plant suitable for small ponds."
+  },
+  {
+    "id": 3,
+    "name": "Water Lilly",
+    "category": "aquatic",
+    "image": "/plantsImages/aquatic/waterlilly1.webp",
+    "image2": "/plantsImages/aquatic/waterlilly2.webp",
+    "oldPrice": 140,
+    "price": 120,
+    "rating": 4.5,
+    "description": "Beautiful water flowering plant that enhances pond aesthetics."
+  },
+  {
+    "id": 4,
+    "name": "White Lotus",
+    "category": "aquatic",
+    "image": "/plantsImages/aquatic/whitelotus1.webp",
+    "image2": "/plantsImages/aquatic/whitelotus2.webp",
+    "oldPrice": 180,
+    "price": 140,
+    "rating": 4.7,
+    "description": "Elegant white lotus symbolizing purity, perfect for decorative ponds."
+  },
+
+  {
+    "id": 5,
+    "name": "Bougainvillea",
+    "category": "flowers",
+    "image": "/plantsImages/flower/Bougainvillea1.webp",
+    "image2": "/plantsImages/flower/Bougainvillea2.webp",
+    "oldPrice": 200,
+    "price": 160,
+    "rating": 4.4,
+    "description": "Hardy flowering plant with vibrant colors, ideal for outdoor gardens."
+  },
+  {
+    "id": 6,
+    "name": "Hibiscus",
+    "category": "flowers",
+    "image": "/plantsImages/flower/hibiscus1.webp",
+    "image2": "/plantsImages/flower/hibiscus2.webp",
+    "oldPrice": 100,
+    "price": 50,
+    "rating": 4.3,
+    "description": "Popular tropical flower plant known for large colorful blooms."
+  },
+  {
+    "id": 7,
+    "name": "Hibiscus Orange",
+    "category": "flowers",
+    "image": "/plantsImages/flower/hibiscusorange1.webp",
+    "image2": "/plantsImages/flower/hibiscusorange2.webp",
+    "oldPrice": 100,
+    "price": 60,
+    "rating": 4.1,
+    "description": "Orange hibiscus variety that adds bright color to home gardens."
+  },
+  {
+    "id": 8,
+    "name": "Hibiscus Pink",
+    "category": "flowers",
+    "image": "/plantsImages/flower/hibiscuspink1.webp",
+    "image2": "/plantsImages/flower/hibiscuspink2.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.2,
+    "description": "Pink hibiscus plant with long-lasting blooms."
+  },
+  {
+    "id": 9,
+    "name": "Ixora",
+    "category": "flowers",
+    "image": "/plantsImages/flower/ixora1.webp",
+    "image2": "/plantsImages/flower/ixora2.webp",
+    "oldPrice": 80,
+    "price": 40,
+    "rating": 4.0,
+    "description": "Compact flowering shrub ideal for hedges and pots."
+  },
+  {
+    "id": 10,
+    "name": "Jasmine",
+    "category": "flowers",
+    "image": "/plantsImages/flower/jasmine1.webp",
+    "image2": "/plantsImages/flower/jasmine2.webp",
+    "oldPrice": 300,
+    "price": 260,
+    "rating": 4.8,
+    "description": "Highly fragrant flowering plant commonly used in garlands."
+  },
+  {
+    "id": 11,
+    "name": "Parijatham",
+    "category": "flowers",
+    "image": "/plantsImages/flower/parijatham1.webp",
+    "image2": "/plantsImages/flower/parijatham2.webp",
+    "oldPrice": 260,
+    "price": 220,
+    "rating": 4.6,
+    "description": "Night-flowering jasmine with medicinal and ornamental value."
+  },
+  {
+    "id": 12,
+    "name": "Rose",
+    "category": "flowers",
+    "image": "/plantsImages/flower/rose1.webp",
+    "image2": "/plantsImages/flower/rose2.webp",
+    "oldPrice": 300,
+    "price": 280,
+    "rating": 4.7,
+    "description": "Classic flowering plant known for beauty and fragrance."
+  },
+
+  {
+    "id": 13,
+    "name": "Amla",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/amla1.webp",
+    "image2": "/plantsImages/fruit/amla2.webp",
+    "oldPrice": 200,
+    "price": 160,
+    "rating": 4.5,
+    "description": "Medicinal fruit plant rich in Vitamin C."
+  },
+  {
+    "id": 14,
+    "name": "Cherry",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/cherry1.webp",
+    "image2": "/plantsImages/fruit/cherry2.webp",
+    "oldPrice": 100,
+    "price": 50,
+    "rating": 4.0,
+    "description": "Fruit-bearing plant producing sweet and tangy cherries."
+  },
+  {
+    "id": 15,
+    "name": "Custard",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/custard1.webp",
+    "image2": "/plantsImages/fruit/custard2.webp",
+    "oldPrice": 100,
+    "price": 60,
+    "rating": 4.2,
+    "description": "Tropical fruit plant with creamy textured fruits."
+  },
+  {
+    "id": 16,
+    "name": "Guava",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/guava1.webp",
+    "image2": "/plantsImages/fruit/guava.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.4,
+    "description": "Easy-to-grow fruit plant rich in nutrients."
+  },
+  {
+    "id": 17,
+    "name": "Lemon",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/lemon1.webp",
+    "image2": "/plantsImages/fruit/lemon2.webp",
+    "oldPrice": 80,
+    "price": 40,
+    "rating": 4.3,
+    "description": "Citrus fruit plant widely used in cooking and drinks."
+  },
+  {
+    "id": 18,
+    "name": "Sapota",
+    "category": "fruits",
+    "image": "/plantsImages/fruit/sapota1.webp",
+    "image2": "/plantsImages/fruit/sapota2.webp",
+    "oldPrice": 300,
+    "price": 260,
+    "rating": 4.1,
+    "description": "Sweet fruit-bearing tree suitable for tropical climates."
+  },
+
+  {
+    "id": 19,
+    "name": "Bleeding Heart Red",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/bleedingheartred1.webp",
+    "image2": "/plantsImages/hanging/bleedingheartred2.webp",
+    "oldPrice": 200,
+    "price": 160,
+    "rating": 4.5,
+    "description": "Attractive hanging plant with heart-shaped red flowers."
+  },
+  {
+    "id": 20,
+    "name": "Bleeding Heart White",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/bleedingheartwhite1.jpg",
+    "image2": "/plantsImages/hanging/bleedingheartwhite2.webp",
+    "oldPrice": 100,
+    "price": 50,
+    "rating": 4.4,
+    "description": "White variety of bleeding heart, perfect for hanging baskets."
+  },
+
+  {
+    "id": 21,
+    "name": "Garlic Creeper",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/garliccreeper1.jpg",
+    "image2": "/plantsImages/hanging/garliccreeper2.webp",
+    "oldPrice": 100,
+    "price": 60,
+    "rating": 4.2,
+    "description": "Fast-growing creeper with purple fragrant flowers."
+  },
+  {
+    "id": 22,
+    "name": "Laurifolia",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/laurifolia1.webp",
+    "image2": "/plantsImages/hanging/laurifolia2.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.0,
+    "description": "Low-maintenance hanging plant suitable for balconies."
+  },
+
+  {
+    "id": 23,
+    "name": "Portulaca",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/portulaca1.webp",
+    "image2": "/plantsImages/hanging/portulaca2.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.1,
+    "description": "Sun-loving flowering plant ideal for hanging pots."
+  },
+
+  {
+    "id": 24,
+    "name": "Rangoon",
+    "category": "hanging",
+    "image": "/plantsImages/hanging/rangoon1.webp",
+    "image2": "/plantsImages/hanging/rangoon2.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.3,
+    "description": "Fragrant flowering climber also known as Rangoon creeper."
+  },
+
+  {
+    "id": 25,
+    "name": "Ginger",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/ginger.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.5,
+    "description": "Medicinal herb widely used in cooking and remedies."
+  },
+
+  {
+    "id": 26,
+    "name": "Henna",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/henna.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.2,
+    "description": "Herbal plant traditionally used for natural dye."
+  },
+
+  {
+    "id": 27,
+    "name": "Kesavardhini",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/kesavardhini.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.1,
+    "description": "Ayurvedic herb known for hair care benefits."
+  },
+
+  {
+    "id": 28,
+    "name": "Neeem",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/neem.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.7,
+    "description": "Medicinal tree plant with antibacterial properties."
+  },
+
+  {
+    "id": 29,
+    "name": "Tulsi",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/tulsi.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.8,
+    "description": "Sacred medicinal herb widely used in Ayurveda."
+  },
+
+  {
+    "id": 30,
+    "name": "Turmeric",
+    "category": "herbal",
+    "image": "/plantsImages/herbal/turmeric.webp",
+    "oldPrice": 100,
+    "price": 80,
+    "rating": 4.6,
+    "description": "Herbal plant known for its anti-inflammatory properties."
+  },
+  {
+  "id": 31,
+  "name": "Alocasia",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/alocasia.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.4,
+  "description": "Decorative indoor plant with large arrow-shaped leaves, ideal for home interiors."
+},
+{
+  "id": 32,
+  "name": "Coleus",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/coleus.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.1,
+  "description": "Colorful foliage plant suitable for indoor pots and balconies."
+},
+{
+  "id": 33,
+  "name": "Coleus Yellow",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/coleusyellow.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.0,
+  "description": "Bright yellow-leaved coleus variety that adds contrast to indoor spaces."
+},
+{
+  "id": 34,
+  "name": "Golden Money Plant",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/goldenmoneyplant.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.7,
+  "description": "Popular indoor plant believed to bring prosperity and positive energy."
+},
+{
+  "id": 35,
+  "name": "Money Plant",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/moneyplant.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.6,
+  "description": "Easy-to-grow indoor vine plant ideal for beginners."
+},
+{
+  "id": 36,
+  "name": "Syngonium",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/syngonium.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.3,
+  "description": "Low-maintenance indoor plant with attractive arrow-shaped leaves."
+},
+{
+  "id": 37,
+  "name": "Syngonium White",
+  "category": "indoor",
+  "image": "/plantsImages/indoor/syngoniumwhite.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.4,
+  "description": "Elegant white-variegated syngonium suitable for indoor décor."
+},
+{
+  "id": 38,
+  "name": "Badam",
+  "category": "tree",
+  "image": "/plantsImages/tree/badam.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.2,
+  "description": "Nut-producing tree commonly known as almond plant."
+},
+{
+  "id": 39,
+  "name": "Bamboo",
+  "category": "tree",
+  "image": "/plantsImages/tree/bamboo.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.8,
+  "description": "Fast-growing tree plant used for landscaping and indoor decoration."
+},
+{
+  "id": 40,
+  "name": "Mahagony",
+  "category": "tree",
+  "image": "/plantsImages/tree/mahagony.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.3,
+  "description": "Hardwood tree valued for its durable timber."
+},
+{
+  "id": 41,
+  "name": "Teak",
+  "category": "tree",
+  "image": "/plantsImages/tree/teak.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.6,
+  "description": "Premium hardwood tree widely used for furniture making."
+},
+{
+  "id": 42,
+  "name": "Brinjal",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/brinjal.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.1,
+  "description": "Vegetable plant producing purple eggplants for cooking."
+},
+{
+  "id": 43,
+  "name": "Cauliflower",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/cauliflower.jpg",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.0,
+  "description": "Seasonal vegetable plant producing compact white heads."
+},
+{
+  "id": 44,
+  "name": "Chilli",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/chilli.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.4,
+  "description": "Spicy vegetable plant commonly grown in home gardens."
+},
+{
+  "id": 45,
+  "name": "Green Brinjal",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/greenbrinjal.webp",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.0,
+  "description": "Green variety of brinjal suitable for Indian dishes."
+},
+{
+  "id": 46,
+  "name": "Sweet Potato",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/sweetpotato.jpg",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.2,
+  "description": "Root vegetable plant known for its sweet and nutritious tubers."
+},
+{
+  "id": 47,
+  "name": "Tomato",
+  "category": "vegetables",
+  "image": "/plantsImages/vegetables/tomato.jpg",
+  "oldPrice": 100,
+  "price": 80,
+  "rating": 4.5,
+  "description": "Popular vegetable plant producing juicy red tomatoes."
+}
+]

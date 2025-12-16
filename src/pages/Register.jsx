@@ -25,7 +25,7 @@ const Register = () => {
   };
 
   return (
-    <div className="px-10 py-10 min-h-[500px]">
+    <div className="px-10 py-10 ">
       {/* header */}
       <h2 className="text-center font-semibold text-4xl text-gray-500 underline underline-offset-8">
         Register
