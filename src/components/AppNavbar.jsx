@@ -4,10 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
 // bootstrap icons
 import { BsSearch, BsHeart, BsCart, BsPerson } from "react-icons/bs";
 
+// redux
+import { useSelector } from "react-redux";
+
 const AppNavbar = () => {
+  // ✅ get cart items from redux store
+  const cartItems = useSelector((state) => state.cart);
+
   return (
     <Navbar
       expand="lg"
@@ -79,9 +86,30 @@ const AppNavbar = () => {
             <Nav.Link href="/favourites">
               <BsHeart size={24} />
             </Nav.Link>
-            <Nav.Link href="/cart">
+
+            {/* 🛒 CART WITH COUNT */}
+            <Nav.Link href="/cart" style={{ position: "relative" }}>
               <BsCart size={24} />
+
+              {cartItems.length > 0 && (
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "-5px",
+                    right: "-10px",
+                    background: "green",
+                    color: "white",
+                    borderRadius: "50%",
+                    padding: "2px 6px",
+                    fontSize: "12px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {cartItems.length}
+                </span>
+              )}
             </Nav.Link>
+
             <Nav.Link href="/profile">
               <BsPerson size={24} />
             </Nav.Link>

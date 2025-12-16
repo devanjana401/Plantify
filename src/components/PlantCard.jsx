@@ -10,24 +10,26 @@ import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 const PlantCard = ({ plant }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const fav = useSelector(state =>
-    state.fav.some(i => i.id === plant.id)
-  );
-
   const [hover, setHover] = useState(false);
+
+  // Check if this plant is in the wishlist
+  const isFav = useSelector((state) =>
+    state.fav.some((item) => item.id === plant.id)
+  );
 
   return (
     <Card style={{ width: "18rem" }} className="position-relative">
-
-      {/* favourite */}
+      
+      {/* Favourite Heart */}
       <div
-        style={{ position: "absolute", top: 10, right: 10, zIndex: 1 }}
-        onClick={() => dispatch(toggleFav(plant))}
-      >
-        {fav ? <FaHeart color="red" /> : <FaRegHeart />}
-      </div>
+  style={{ position: "absolute", top: 10, right: 10, zIndex: 1, cursor: "pointer" }}
+  onClick={() => dispatch(toggleFav(plant))}
+>
+  {isFav ? <FaHeart color="red" size={20} /> : <FaRegHeart size={20} />}
+</div>
 
-      {/* image hover */}
+
+      {/* Image hover effect */}
       <Card.Img
         variant="top"
         src={hover && plant.image2 ? plant.image2 : plant.image}
@@ -39,7 +41,7 @@ const PlantCard = ({ plant }) => {
       <Card.Body>
         <Card.Title>{plant.name}</Card.Title>
 
-        {/* rating */}
+        {/* Rating */}
         <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
           {[...Array(5)].map((_, index) => (
             <FaStar
@@ -53,12 +55,13 @@ const PlantCard = ({ plant }) => {
           </span>
         </div>
 
-        {/* price */}
+        {/* Price */}
         <div>
           <del>₹{plant.oldPrice}</del>{" "}
           <strong>₹{plant.price}</strong>
         </div>
 
+        {/* Buttons */}
         <div className="d-flex gap-2 mt-2">
           <Button
             variant="success"

@@ -10,12 +10,19 @@ import Footer from './components/Footer';
 import Plants from './pages/Plants';
 import GardeningKit from './pages/GardeningKit';
 import PlantDetails from './components/PlantDetails';
+import Cart from './pages/Cart';
+import Profile from './pages/Profile';
+import Favourite from './pages/Favourite';
+import WhatsappButton from './components/WhatsappButton';
+import TopButton from './components/TopButton';
 
 function App() {
 
   return (
     <>
     <AppNavbar/>
+    <TopButton/>
+    <WhatsappButton/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="about" element={<About/>}/>
@@ -26,6 +33,9 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/contact" element={<Contact />} />
+        <Route path="/favourite" element={<Favourite/>}/>
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     <Footer/>
     </>
