@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
+import BackButton from "../components/BackButton";
 
 const Favourite = () => {
   const fav = useSelector((state) => state.fav);
@@ -20,6 +21,8 @@ const Favourite = () => {
   }
 
   return (
+    <div>
+      <BackButton/>
     <Container className="mt-5">
       <h2 className="mb-4">My Favourites</h2>
 
@@ -66,6 +69,7 @@ const Favourite = () => {
         </Table>
       </Card>
     </Container>
+    </div>
   );
 };
 

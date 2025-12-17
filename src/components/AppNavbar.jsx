@@ -2,28 +2,37 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Button from "react-bootstrap/Button";
 import { BsHeart, BsCart, BsPerson } from "react-icons/bs";
 
 // redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { clearCart } from "../redux/cartSlice"; 
 
 // search component
 import Search from "./Search";
-import plants from "../jsonDatas/plants.json"; // import plants data
+import plants from "../jsonDatas/plants.json";
+import { useNavigate } from "react-router-dom";
 
 const AppNavbar = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
+  const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const userName = localStorage.getItem("userName");
 
   const handleLogout = () => {
+    // remove login info
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userName");
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userPassword");
-    window.location.href = "/signin";
+
+    // clear redux cart & localStorage
+    dispatch(clearCart());
+
+    // navigate to home
+    navigate("/");
   };
 
   return (
@@ -49,7 +58,6 @@ const AppNavbar = () => {
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-content" />
-
         <Navbar.Collapse id="navbar-content" style={{ background: "white" }}>
           {/* center menu */}
           <Nav className="mx-auto align-items-center gap-3 text-2xl">
@@ -73,9 +81,7 @@ const AppNavbar = () => {
             <NavDropdown title="Gardening Kit" id="kit-dropdown">
               <NavDropdown.Item href="/kit/tools">Tools</NavDropdown.Item>
               <NavDropdown.Item href="/kit/pots">Pots</NavDropdown.Item>
-              <NavDropdown.Item href="/kit/fertilizer">
-                Fertilizer
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/kit/fertilizer">Fertilizer</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/contact">Contact</Nav.Link>
@@ -119,9 +125,7 @@ const AppNavbar = () => {
             {isLoggedIn ? (
               <NavDropdown title={`Welcome, ${userName}`} id="user-dropdown">
                 <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                <NavDropdown.Item onClick={handleLogout}>
-                  Logout
-                </NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
               </NavDropdown>
             ) : (
               <Nav.Link href="/signin">

@@ -9,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import BackButton from "../components/BackButton";
 
 const Cart = () => {
   const cart = useSelector(state => state.cart);
@@ -29,6 +30,8 @@ const Cart = () => {
   }
 
   return (
+    <div>
+      <BackButton/>
     <Container className="mt-5">
       <h2 className="mb-4">Shopping Cart</h2>
 
@@ -138,6 +141,7 @@ const Cart = () => {
         </Button>
       </Card>
     </Container>
+    </div>
   );
 };
 

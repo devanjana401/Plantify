@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddress } from "../redux/profileSlice";
+import BackButton from "../components/BackButton";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,8 @@ const Profile = () => {
   };
 
   return (
+    <div>
+      <BackButton/>
     <div className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-md mt-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
         Delivery Address
@@ -92,6 +95,7 @@ const Profile = () => {
           Save Address
         </button>
       </form>
+    </div>
     </div>
   );
 };

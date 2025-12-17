@@ -6,6 +6,7 @@ import plants from "../jsonDatas/plants.json";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import BackButton from "./BackButton";
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -20,6 +21,8 @@ const PlantDetails = () => {
   };
 
   return (
+    <div>
+      <BackButton/>
     <Card className="p-4 mt-4" style={{ maxWidth: "900px", margin: "auto" }}>
       <Row>
         {/* left side - images */}
@@ -74,6 +77,7 @@ const PlantDetails = () => {
         </Col>
       </Row>
     </Card>
+    </div>
   );
 };
 
