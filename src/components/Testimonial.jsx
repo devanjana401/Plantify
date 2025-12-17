@@ -56,7 +56,7 @@ const Testimonial = () => {
   return (
     <section className="stories" id="review">
       <div className="container">
-        <h2>Happy Plant Parents</h2>
+        <h2 style={{textDecoration:"underline",textUnderlineOffset:"6px"}}>Happy Plant Parents</h2>
 
         <div className="testimonials-wrapper">
           <div

@@ -1,15 +1,20 @@
-import React from 'react'
-import AppNavbar from '../components/AppNavbar'
-import HomeCarousel from '../components/HomeCarousel'
-import Testimonial from '../components/Testimonial'
+import React from "react";
+import AppNavbar from "../components/AppNavbar";
+import HomeCarousel from "../components/HomeCarousel";
+import Testimonial from "../components/Testimonial";
+import BestsellerPlants from "../components/BestsellerPlants";
+
+// Example plant data (replace with your real data or JSON)
+import plants from "../jsonDatas/plants.json"
 
 const Home = () => {
   return (
     <div>
-      <HomeCarousel/>
-      <Testimonial/>
+      <HomeCarousel />
+      <BestsellerPlants plants={plants} />
+      <Testimonial />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

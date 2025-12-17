@@ -9,6 +9,10 @@ const Footer = () => {
                     {/* about */}
                     <div className="col-md-3 col-sm-6 mb-4">
                         <h5><a href="/about">About Us</a></h5>
+                        <ul>
+                            <li><a href="/about">Our Mission</a></li>
+                            <li><a href="/about">Our Vision</a></li>
+                        </ul>
                     </div>
 
                     {/* links */}

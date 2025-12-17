@@ -16,22 +16,45 @@ const PlantCard = ({ plant }) => {
     state.fav.some((item) => item.id === plant.id)
   );
 
+  // automatically determine if plant is a bestseller
+  const isBestseller = plant.rating >= 4.5;
+
   return (
     <Card
       className="position-relative h-100 shadow-sm"
       style={{
         width: "100%",
-        maxWidth: "250px", 
+        maxWidth: "250px",
         margin: "0 auto",
       }}
     >
+      {/* bestseller badge */}
+      {isBestseller && (
+        <div
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            backgroundColor: "red",
+            color: "white",
+            padding: "4px 6px",
+            fontSize: "12px",
+            borderRadius: "3px",
+            zIndex: 10,
+            pointerEvents: "none",
+          }}
+        >
+          Bestseller
+        </div>
+      )}
+
       {/* favourite icon */}
       <div
         style={{
           position: "absolute",
           top: 8,
           right: 8,
-          zIndex: 1,
+          zIndex: 10,
           cursor: "pointer",
         }}
         onClick={() => dispatch(toggleFav(plant))}

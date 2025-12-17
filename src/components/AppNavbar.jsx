@@ -2,18 +2,29 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
-// bootstrap icons
-import { BsSearch, BsHeart, BsCart, BsPerson } from "react-icons/bs";
+import { BsHeart, BsCart, BsPerson } from "react-icons/bs";
 
 // redux
 import { useSelector } from "react-redux";
 
+// search component
+import Search from "./Search";
+import plants from "../jsonDatas/plants.json"; // import plants data
+
 const AppNavbar = () => {
-  //  get cart items from redux store
   const cartItems = useSelector((state) => state.cart);
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const userName = localStorage.getItem("userName");
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userPassword");
+    window.location.href = "/signin";
+  };
 
   return (
     <Navbar
@@ -23,7 +34,7 @@ const AppNavbar = () => {
       style={{ height: "80px", zIndex: 1050 }}
     >
       <Container fluid>
-        {/* logo + name */}
+        {/* logo */}
         <Navbar.Brand href="/" className="d-flex align-items-center ml-10">
           <img
             src="/logo.png"
@@ -40,7 +51,7 @@ const AppNavbar = () => {
         <Navbar.Toggle aria-controls="navbar-content" />
 
         <Navbar.Collapse id="navbar-content" style={{ background: "white" }}>
-          {/* menu items */}
+          {/* center menu */}
           <Nav className="mx-auto align-items-center gap-3 text-2xl">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
@@ -70,28 +81,21 @@ const AppNavbar = () => {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
 
+          {/* right side */}
           <Nav className="align-items-center gap-3">
             {/* search */}
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search plants"
-                size="md"
-              />
-              <Button variant="outline-success" size="sm">
-                <BsSearch />
-              </Button>
-            </Form>
+            <div className="d-flex">
+              <Search plants={plants} />
+            </div>
 
-            {/* icons */}
+            {/* favourites */}
             <Nav.Link href="/favourites">
               <BsHeart size={24} />
             </Nav.Link>
 
-            {/* cart with count */}
+            {/* cart */}
             <Nav.Link href="/cart" style={{ position: "relative" }}>
               <BsCart size={24} />
-
               {cartItems.length > 0 && (
                 <span
                   style={{
@@ -111,9 +115,19 @@ const AppNavbar = () => {
               )}
             </Nav.Link>
 
-            <Nav.Link href="/profile">
-              <BsPerson size={24} />
-            </Nav.Link>
+            {/* user */}
+            {isLoggedIn ? (
+              <NavDropdown title={`Welcome, ${userName}`} id="user-dropdown">
+                <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <Nav.Link href="/signin">
+                <BsPerson size={24} />
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

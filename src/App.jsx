@@ -1,5 +1,7 @@
 import './App.css'
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
+
 import Contact from "./pages/Contact";
 import Home from './pages/Home';
 import Register from './pages/Register';
@@ -17,29 +19,56 @@ import WhatsappButton from './components/WhatsappButton';
 import TopButton from './components/TopButton';
 
 function App() {
-
   return (
     <>
-    <AppNavbar/>
-    <TopButton/>
-    <WhatsappButton/>
+      <AppNavbar/>
+      <TopButton/>
+      <WhatsappButton/>
+
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="about" element={<About/>}/>
-        <Route path="plants" element={<Plants/>}/>
-        <Route path="plants/:category?" element={<Plants />} />
-        <Route path="/plant/:id" element={<PlantDetails/>} />
-        <Route path="gardeningkit" element={<GardeningKit/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/signin" element={<Signin/>}/>
+        {/* public routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/plants" element={<Plants />} />
+        <Route path="/plants/:category?" element={<Plants />} />
+        <Route path="/plant/:id" element={<PlantDetails />} />
+        <Route path="/gardeningkit" element={<GardeningKit />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/favourites" element={<Favourite/>}/>
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<Profile />} />
+
+        {/* private routes*/}
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/favourites"
+          element={
+            <PrivateRoute>
+              <Favourite />
+            </PrivateRoute>
+          }
+        />
+        
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
       </Routes>
-    <Footer/>
+
+      <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
