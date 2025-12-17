@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import AppNavbar from "../components/Appnavbar";
+import AppNavbar from "../components/AppNavbar";
 
 const Signin = () => {
   const navigate = useNavigate();

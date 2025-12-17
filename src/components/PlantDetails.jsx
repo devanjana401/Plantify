@@ -22,7 +22,7 @@ const PlantDetails = () => {
   return (
     <Card className="p-4 mt-4" style={{ maxWidth: "900px", margin: "auto" }}>
       <Row>
-        {/* LEFT SIDE – IMAGES */}
+        {/* left side - images */}
         <Col md={6} className="d-flex flex-column align-items-center">
           <img
             src={plant.image}
@@ -50,7 +50,7 @@ const PlantDetails = () => {
           )}
         </Col>
 
-        {/* RIGHT SIDE – DETAILS */}
+        {/* right side - details */}
         <Col md={6}>
           <h3>{plant.name}</h3>
           <p className="text-muted">{plant.description}</p>

@@ -12,68 +12,85 @@ const PlantCard = ({ plant }) => {
   const navigate = useNavigate();
   const [hover, setHover] = useState(false);
 
-  // Check if this plant is in the wishlist
   const isFav = useSelector((state) =>
     state.fav.some((item) => item.id === plant.id)
   );
 
   return (
-    <Card style={{ width: "18rem" }} className="position-relative">
-      
-      {/* Favourite Heart */}
+    <Card
+      className="position-relative h-100 shadow-sm"
+      style={{
+        width: "100%",
+        maxWidth: "250px", 
+        margin: "0 auto",
+      }}
+    >
+      {/* favourite icon */}
       <div
-  style={{ position: "absolute", top: 10, right: 10, zIndex: 1, cursor: "pointer" }}
-  onClick={() => dispatch(toggleFav(plant))}
->
-  {isFav ? <FaHeart color="red" size={20} /> : <FaRegHeart size={20} />}
-</div>
+        style={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          zIndex: 1,
+          cursor: "pointer",
+        }}
+        onClick={() => dispatch(toggleFav(plant))}
+      >
+        {isFav ? <FaHeart color="red" size={18} /> : <FaRegHeart size={18} />}
+      </div>
 
-
-      {/* Image hover effect */}
+      {/* image hover */}
       <Card.Img
         variant="top"
         src={hover && plant.image2 ? plant.image2 : plant.image}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        style={{ height: "200px", objectFit: "cover" }}
+        style={{
+          height: "180px",
+          objectFit: "cover",
+          width: "100%",
+        }}
       />
 
-      <Card.Body>
-        <Card.Title>{plant.name}</Card.Title>
+      <Card.Body className="d-flex flex-column p-2">
+        <Card.Title style={{ fontSize: "1rem", marginBottom: "0.25rem" }}>
+          {plant.name}
+        </Card.Title>
 
-        {/* Rating */}
-        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+        {/* rating */}
+        <div className="d-flex align-items-center gap-1 mb-1">
           {[...Array(5)].map((_, index) => (
             <FaStar
               key={index}
               color={index < Math.round(plant.rating) ? "gold" : "#ccc"}
-              size={14}
+              size={12}
             />
           ))}
-          <span style={{ fontSize: "14px", color: "#555" }}>
+          <span className="text-muted" style={{ fontSize: "0.75rem" }}>
             {plant.rating}
           </span>
         </div>
 
-        {/* Price */}
-        <div>
-          <del>₹{plant.oldPrice}</del>{" "}
+        {/* price */}
+        <div className="mb-2" style={{ fontSize: "0.875rem" }}>
+          <del className="text-muted">₹{plant.oldPrice}</del>{" "}
           <strong>₹{plant.price}</strong>
         </div>
 
-        {/* Buttons */}
-        <div className="d-flex gap-2 mt-2">
+        {/* buttons */}
+        <div className="mt-auto d-flex gap-1">
           <Button
             variant="success"
             size="sm"
+            className="flex-grow-1"
             onClick={() => dispatch(addToCart(plant))}
           >
             Add to Cart
           </Button>
-
           <Button
             variant="primary"
             size="sm"
+            className="flex-grow-1"
             onClick={() => navigate(`/plant/${plant.id}`)}
           >
             View

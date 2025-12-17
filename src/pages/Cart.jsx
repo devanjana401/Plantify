@@ -101,7 +101,7 @@ const Cart = () => {
         </Table>
       </Card>
 
-      {/* DELIVERY ADDRESS */}
+      {/* delivery address */}
       <Card className="mb-4 p-3 shadow-sm">
         <h5>Delivery Address</h5>
         <hr />
@@ -119,7 +119,7 @@ const Cart = () => {
         )}
       </Card>
 
-      {/* CART SUMMARY */}
+      {/* cart summary */}
       <Card className="mt-4 p-3 shadow-sm" style={{ maxWidth: "400px" }}>
         <h5>Cart Summary</h5>
         <hr />

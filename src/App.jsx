@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Signin from './pages/Signin';
 import About from './pages/About';
-import AppNavbar from './components/Appnavbar';
+import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
 import Plants from './pages/Plants';
 import GardeningKit from './pages/GardeningKit';
@@ -33,7 +33,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/contact" element={<Contact />} />
-        <Route path="/favourite" element={<Favourite/>}/>
+        <Route path="/favourites" element={<Favourite/>}/>
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>

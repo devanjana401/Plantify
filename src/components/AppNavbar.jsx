@@ -12,7 +12,7 @@ import { BsSearch, BsHeart, BsCart, BsPerson } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
 const AppNavbar = () => {
-  // ✅ get cart items from redux store
+  //  get cart items from redux store
   const cartItems = useSelector((state) => state.cart);
 
   return (
@@ -46,6 +46,7 @@ const AppNavbar = () => {
             <Nav.Link href="/about">About</Nav.Link>
 
             <NavDropdown title="Plants" id="plants-dropdown">
+              <NavDropdown.Item href="/plants">All Plants</NavDropdown.Item>
               <NavDropdown.Item href="/plants/aquatic">Aquatic</NavDropdown.Item>
               <NavDropdown.Item href="/plants/flower">Flowers</NavDropdown.Item>
               <NavDropdown.Item href="/plants/fruit">Fruits</NavDropdown.Item>
@@ -87,7 +88,7 @@ const AppNavbar = () => {
               <BsHeart size={24} />
             </Nav.Link>
 
-            {/* 🛒 CART WITH COUNT */}
+            {/* cart with count */}
             <Nav.Link href="/cart" style={{ position: "relative" }}>
               <BsCart size={24} />
 

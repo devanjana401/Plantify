@@ -1,7 +1,6 @@
-// src/redux/profileSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
-// Load from localStorage if available
+// load from localStorage if available
 const savedAddress = localStorage.getItem("deliveryAddress")
   ? JSON.parse(localStorage.getItem("deliveryAddress"))
   : {
@@ -23,7 +22,7 @@ const profileSlice = createSlice({
   reducers: {
     setAddress: (state, action) => {
       state.address = action.payload;
-      // Save to localStorage
+      // save to localStorage
       localStorage.setItem("deliveryAddress", JSON.stringify(state.address));
     },
     clearAddress: (state) => {

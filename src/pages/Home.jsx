@@ -1,5 +1,5 @@
 import React from 'react'
-import AppNavbar from '../components/Appnavbar'
+import AppNavbar from '../components/AppNavbar'
 import HomeCarousel from '../components/HomeCarousel'
 import Testimonial from '../components/Testimonial'
 

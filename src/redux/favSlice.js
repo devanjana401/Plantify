@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Load initial wishlist from localStorage or start with empty array
+// load initial wishlist from localStorage or start with empty array
 const initialState = JSON.parse(localStorage.getItem("fav")) || [];
 
 const favSlice = createSlice({
@@ -10,12 +10,12 @@ const favSlice = createSlice({
     toggleFav: (state, action) => {
       const exists = state.find(i => i.id === action.payload.id);
       if (exists) {
-        // Remove item if it already exists
+        // remove item if it already exists
         const updated = state.filter(i => i.id !== action.payload.id);
         localStorage.setItem("fav", JSON.stringify(updated));
         return updated; // return filtered state
       } else {
-        // Add new item
+        // add new item
         state.push(action.payload);
         localStorage.setItem("fav", JSON.stringify(state));
       }

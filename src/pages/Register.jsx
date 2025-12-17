@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppNavbar from "../components/Appnavbar";
+import AppNavbar from "../components/AppNavbar";
 
 const Register = () => {
   const navigate = useNavigate();

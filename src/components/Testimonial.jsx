@@ -1,9 +1,10 @@
-import { useState } from "react";
-import "../css/testimonial.css"; 
+import { useState, useEffect } from "react";
+import Card from "react-bootstrap/Card";
+import "../css/testimonial.css";
 
 const Testimonial = () => {
   const [activeDot, setActiveDot] = useState(0);
-  const visibleCount = 3;
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const testimonials = [
     {
@@ -33,6 +34,23 @@ const Testimonial = () => {
     },
   ];
 
+  /* detect screen size for dot moving */
+  useEffect(() => {
+    const updateVisible = () => {
+      if (window.innerWidth <= 600) {
+        setVisibleCount(1);
+      } else if (window.innerWidth <= 992) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
+      }
+    };
+
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
   const move = activeDot * (100 / visibleCount);
 
   return (
@@ -46,27 +64,31 @@ const Testimonial = () => {
             style={{ transform: `translateX(-${move}%)` }}
           >
             {testimonials.map((item, index) => (
-              <div className="testimonial" key={index}>
-                <p className="quote" style={{ height: "100px" }}>
-                  “{item.text}”
-                </p>
-                <div className="profile">
-                  <img src={item.img} alt={item.name} />
-                  <h4>{item.name}</h4>
-                </div>
-              </div>
+              <Card className="testimonial" key={index}>
+                <Card.Body>
+                  <p className="quote">“{item.text}”</p>
+                  <div className="profile">
+                    <img src={item.img} alt={item.name} />
+                    <h4>{item.name}</h4>
+                  </div>
+                </Card.Body>
+              </Card>
             ))}
           </div>
         </div>
 
+        {/* dots making responsive */}
         <div className="dots">
-          {[0, 1, 2].map((dot) => (
-            <span
-              key={dot}
-              className={`dot ${activeDot === dot ? "active" : ""}`}
-              onClick={() => setActiveDot(dot)}
-            ></span>
-          ))}
+          {Array.from(
+            { length: Math.ceil(testimonials.length / visibleCount) },
+            (_, i) => (
+              <span
+                key={i}
+                className={`dot ${activeDot === i ? "active" : ""}`}
+                onClick={() => setActiveDot(i)}
+              ></span>
+            )
+          )}
         </div>
       </div>
     </section>
@@ -74,5 +96,3 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
-
-
