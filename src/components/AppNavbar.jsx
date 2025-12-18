@@ -5,8 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { BsHeart, BsCart, BsPerson } from "react-icons/bs";
 
 // redux
-import { useSelector, useDispatch } from "react-redux";
-import { clearCart } from "../redux/cartSlice"; 
+import { useSelector } from "react-redux";
 
 // search component
 import Search from "./Search";
@@ -14,22 +13,18 @@ import plants from "../jsonDatas/plants.json";
 import { useNavigate } from "react-router-dom";
 
 const AppNavbar = () => {
-  const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.cart); // get cart from Redux
   const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const userName = localStorage.getItem("userName");
 
   const handleLogout = () => {
-    // remove login info
+    // remove login info only
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userName");
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userPassword");
-
-    // clear redux cart & localStorage
-    dispatch(clearCart());
 
     // navigate to home
     navigate("/");
@@ -73,13 +68,12 @@ const AppNavbar = () => {
               <NavDropdown.Item href="/plants/herbal">Herbal</NavDropdown.Item>
               <NavDropdown.Item href="/plants/indoor">Indoor</NavDropdown.Item>
               <NavDropdown.Item href="/plants/tree">Trees</NavDropdown.Item>
-              <NavDropdown.Item href="/plants/vegetables">
-                Vegetables
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/plants/vegetables">Vegetables</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Gardening Kit" id="kit-dropdown">
-              <NavDropdown.Item href="/kit/tools">Tools</NavDropdown.Item>
+              <NavDropdown.Item href="/kit">All</NavDropdown.Item>
+              <NavDropdown.Item href="/kit/growbags">Grow Bags</NavDropdown.Item>
               <NavDropdown.Item href="/kit/pots">Pots</NavDropdown.Item>
               <NavDropdown.Item href="/kit/fertilizer">Fertilizer</NavDropdown.Item>
             </NavDropdown>
@@ -102,7 +96,7 @@ const AppNavbar = () => {
             {/* cart */}
             <Nav.Link href="/cart" style={{ position: "relative" }}>
               <BsCart size={24} />
-              {cartItems.length > 0 && (
+              {isLoggedIn && cartItems.length > 0 && (
                 <span
                   style={{
                     position: "absolute",

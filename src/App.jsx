@@ -17,6 +17,8 @@ import Profile from './pages/Profile';
 import Favourite from './pages/Favourite';
 import WhatsappButton from './components/WhatsappButton';
 import TopButton from './components/TopButton';
+import Checkout from './components/Checkout';
+import OrderSuccess from './components/OrderSuccess';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route path="/plant/:id" element={<PlantDetails />} />
         <Route path="/gardeningkit" element={<GardeningKit />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
 
         {/* private routes*/}
         <Route
