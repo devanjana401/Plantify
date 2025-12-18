@@ -42,6 +42,7 @@ const Signin = () => {
 
     if (!registeredUser) {
       alert("No registered user found. Please register first!");
+      navigate("/register");
       setEmail("");
       setPassword("");
       return;
