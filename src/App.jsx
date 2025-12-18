@@ -20,6 +20,9 @@ import TopButton from './components/TopButton';
 import Checkout from './components/Checkout';
 import OrderSuccess from './components/OrderSuccess';
 import GardeningDetails from './components/GardeningDetails';
+import AdminLogin from './admin/AdminLogin';
+import AdminGardeningKit from './admin/AdminGardeningKit';
+import AdminPrivateRoute from './admin/AdminPrivateRoute';
 
 function App() {
   return (
@@ -44,7 +47,19 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-success" element={<OrderSuccess />} />
 
+        <Route path="/admin" element={<AdminLogin/>}/>
+
         {/* private routes*/}
+        
+        <Route 
+        path="/admingardening"
+        element={
+        <AdminPrivateRoute>
+          <AdminGardeningKit/>
+        </AdminPrivateRoute>
+        }
+        />
+
         <Route
           path="/cart"
           element={
