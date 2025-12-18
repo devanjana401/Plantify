@@ -19,13 +19,14 @@ import WhatsappButton from './components/WhatsappButton';
 import TopButton from './components/TopButton';
 import Checkout from './components/Checkout';
 import OrderSuccess from './components/OrderSuccess';
+import GardeningDetails from './components/GardeningDetails';
 
 function App() {
   return (
     <>
-      <AppNavbar/>
-      <TopButton/>
-      <WhatsappButton/>
+      <AppNavbar />
+      <TopButton />
+      <WhatsappButton />
 
       <Routes>
         {/* public routes */}
@@ -36,7 +37,9 @@ function App() {
         <Route path="/plants" element={<Plants />} />
         <Route path="/plants/:category?" element={<Plants />} />
         <Route path="/plant/:id" element={<PlantDetails />} />
-        <Route path="/gardeningkit" element={<GardeningKit />} />
+        <Route path="/kit" element={<GardeningKit />} />
+        <Route path="/kit/:category" element={<GardeningKit />} />
+        <Route path="/kit/item/:id" element={<GardeningDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-success" element={<OrderSuccess />} />
@@ -59,7 +62,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        
+
         <Route
           path="/profile"
           element={
@@ -70,7 +73,7 @@ function App() {
         />
       </Routes>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
