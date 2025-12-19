@@ -1,4 +1,3 @@
-// searchData.js
 export const searchData = [
   // pages
   { name: "home", url: "/" },

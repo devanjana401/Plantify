@@ -88,6 +88,7 @@ const AppNavbar = () => {
               <Search plants={plants} />
             </div>
 
+            <div className="d-flex gap-2">
             {/* favourites */}
             <Nav.Link href="/favourites">
               <BsHeart size={24} />
@@ -126,6 +127,8 @@ const AppNavbar = () => {
                 <BsPerson size={24} />
               </Nav.Link>
             )}
+            </div>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
