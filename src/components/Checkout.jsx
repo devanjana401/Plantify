@@ -58,7 +58,7 @@ const Checkout = () => {
     dispatch(clearCart());
 
     // redirect
-    navigate("/profile");
+    navigate("/order-success");
   };
 
   return (
