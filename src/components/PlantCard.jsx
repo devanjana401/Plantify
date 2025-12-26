@@ -8,11 +8,11 @@ import { useNavigate } from "react-router-dom";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 
 const PlantCard = ({ plant }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();         //send actions to redux store
   const navigate = useNavigate();
   const [hover, setHover] = useState(false);
 
-  const isFav = useSelector((state) =>
+  const isFav = useSelector((state) =>      //read redux state
     state.fav.some((item) => item.id === plant.id)
   );
 
@@ -106,7 +106,7 @@ const PlantCard = ({ plant }) => {
             variant="success"
             size="sm"
             className="flex-grow-1"
-            onClick={() => dispatch(addToCart(plant))}
+            onClick={() => dispatch(addToCart(plant))}    //adds plant to redux cart
           >
             Add to Cart
           </Button>

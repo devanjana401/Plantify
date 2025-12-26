@@ -1,4 +1,3 @@
-// src/components/Favourite.jsx
 import { useSelector, useDispatch } from "react-redux";
 import { toggleFav } from "../redux/favSlice";
 

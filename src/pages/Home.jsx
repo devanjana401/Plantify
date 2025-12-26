@@ -4,7 +4,7 @@ import HomeCarousel from "../components/HomeCarousel";
 import Testimonial from "../components/Testimonial";
 import BestsellerPlants from "../components/BestsellerPlants";
 
-// example plant data (replace with your real data or JSON)
+// plant data 
 import plants from "../jsonDatas/plants.json"
 
 const Home = () => {

@@ -31,11 +31,11 @@ const GardeningKit = () => {
           ? `${SERVER_URL}/gardening?category=${category}`
           : `${SERVER_URL}/gardening`;
 
-        const response = await axios.get(url);
-        setGardeningItems(response.data);
+        const response = await axios.get(url);    //sends get request to server
+        setGardeningItems(response.data);         //stores response data in state
       } catch (error) {
         console.error("Error fetching gardening items:", error);
-      } finally {
+      } finally {                                 //confirm loading ends even if error occurs
         setLoading(false);
       }
     };

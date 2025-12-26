@@ -12,7 +12,7 @@ const Search = () => {
   const searchFormRef = useRef();
   const navigate = useNavigate();
 
-  // combine searchData + plants
+  // combine searchdata + plants
   const pages = [
     ...searchData.map((p) => ({ name: p.name.toLowerCase(), url: p.url })),
     ...plants.map((p) => ({ name: p.name.toLowerCase(), url: `/plant/${p.id}` })),

@@ -83,7 +83,7 @@ const Testimonial = () => {
             { length: Math.ceil(testimonials.length / visibleCount) },
             (_, i) => (
               <span
-                key={i}
+                key={i}              //track which dot changes
                 className={`dot ${activeDot === i ? "active" : ""}`}
                 onClick={() => setActiveDot(i)}
               ></span>

@@ -12,7 +12,7 @@ const Checkout = () => {
   const userEmail = localStorage.getItem("userEmail");
 
   // total price
-  const totalPrice = cartItems.reduce(
+  const totalPrice = cartItems.reduce(        //to sum total cost
     (sum, item) => sum + (item.price || 0) * (item.qty || 1),
     0
   );

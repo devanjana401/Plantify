@@ -67,7 +67,7 @@ const GardeningCard = ({ item }) => {
                             dispatch(
                                 addToCart({
                                     ...item,
-                                    image: `${SERVER_URL}${item.image}`,
+                                    image: `${SERVER_URL}${item.image}`,          //converts relative path to full url
                                     image2: item.image2 ? `${SERVER_URL}${item.image2}` : null,
                                 })
                             )

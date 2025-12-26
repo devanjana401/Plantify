@@ -13,7 +13,7 @@ import plants from "../jsonDatas/plants.json";
 import { useNavigate } from "react-router-dom";
 
 const AppNavbar = () => {
-  const cartItems = useSelector((state) => state.cart); // get cart from Redux
+  const cartItems = useSelector((state) => state.cart); // get cart from redux
   const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";

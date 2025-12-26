@@ -6,7 +6,7 @@ import Filter from "../components/Filter";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Plants = () => {
-  const { category } = useParams();
+  const { category } = useParams();     //extracts category from url
 
   const [showFilter, setShowFilter] = useState(false);
   const [price, setPrice] = useState("all");
@@ -28,7 +28,7 @@ const Plants = () => {
   if (price === "high") filteredPlants = filteredPlants.filter(p => p.price > 700);
 
   // rating filter
-  if (rating !== "all") filteredPlants = filteredPlants.filter(p => p.rating >= Number(rating));
+  if (rating !== "all") filteredPlants = filteredPlants.filter(p => p.rating >= Number(rating));     //converts string to number
 
   return (
     <Container fluid className="my-4">
