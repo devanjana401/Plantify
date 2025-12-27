@@ -1,13 +1,28 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "dest": "/assets/$1"
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/:path*.png",
+      "destination": "/:path*.png"
+    },
+    {
+      "source": "/:path*.jpg",
+      "destination": "/:path*.jpg"
+    },
+    {
+      "source": "/:path*.jpeg",
+      "destination": "/:path*.jpeg"
+    },
+    {
+      "source": "/:path*.svg",
+      "destination": "/:path*.svg"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
