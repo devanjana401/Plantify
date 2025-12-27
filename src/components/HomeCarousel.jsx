@@ -11,7 +11,7 @@ const HomeCarousel = () => {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{ fontSize: "50px" }}>Grow Joy This New Year...</h2>
+          <h2 style={{ fontSize: "40px" }}>Grow Joy This Week...</h2>
           <p style={{ fontSize: "30px" }}>
             Up to 30% OFF on Plants & Gardening Kits
           </p>
@@ -26,7 +26,7 @@ const HomeCarousel = () => {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{ fontSize: "50px" }}>Grow With Plantify</h2>
+          <h2 style={{ fontSize: "40px" }}>Grow With Plantify</h2>
           <p style={{ fontSize: "30px" }}>
             Indoor • Flowers • Herbal • Fruits
           </p>
@@ -41,7 +41,7 @@ const HomeCarousel = () => {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{ fontSize: "50px" }}>Gardening Made Easy</h2>
+          <h2 style={{ fontSize: "40px" }}>Gardening Made Easy</h2>
           <p style={{ fontSize: "30px" }}>
             Everything you need in one place
           </p>
