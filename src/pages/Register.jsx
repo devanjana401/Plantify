@@ -34,7 +34,7 @@ const Register = () => {
       {/* wrapper */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-10 gap-10">
 
-        {/* Form */}
+        {/* form */}
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 w-full md:w-[60%] lg:w-[30%]"

@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = JSON.parse(localStorage.getItem("cart")) || [];
+const initialState = JSON.parse(localStorage.getItem("cart")) || [];     //parse - convert string into js array
 
-const cartSlice = createSlice({
+const cartSlice = createSlice({      //helper function,create reducer+actions together,automatically generate action creators and types
   name: "cart",
   initialState,
-  reducers: {
+  reducers: {                   //reducer functions that define how the state changes
     addToCart: (state, action) => {
       const existing = state.find(item => item.id === action.payload.id);
 

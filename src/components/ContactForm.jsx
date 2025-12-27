@@ -16,7 +16,7 @@ const ContactForm = () => {
   };
 
   const validate = () => {
-    let newErrors = {};
+    let newErrors = {};            //temporary object to collect all errors
     const namePattern = /^[a-zA-Z\s'-]+$/;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phonePattern = /^\d{10}$/;
@@ -34,7 +34,7 @@ const ContactForm = () => {
       newErrors.message = "Message is required!";
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).length === 0;       //converts object keys into an array {} to []
   };
 
   const handleSubmit = (e) => {

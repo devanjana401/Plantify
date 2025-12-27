@@ -11,7 +11,7 @@ const HomeCarousel = () => {
           style={{ height: "400px", objectFit: "cover" }}
         />
         <Carousel.Caption>
-          <h2 style={{ fontSize: "50px" }}>Grow Joy This Christmas🎄</h2>
+          <h2 style={{ fontSize: "50px" }}>Grow Joy This New Year...</h2>
           <p style={{ fontSize: "30px" }}>
             Up to 30% OFF on Plants & Gardening Kits
           </p>

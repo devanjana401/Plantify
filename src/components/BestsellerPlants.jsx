@@ -4,7 +4,7 @@ import PlantCard from "./PlantCard";
 
 const BestsellerPlants = ({ plants }) => {
   // get top 8 plants by rating
-  const bestsellerPlants = [...plants]          //creates a copy of the plants array so sorting won’t affect the original data.
+  const bestsellerPlants = [...plants]          //creates a copy of the plants array so sorting won’t affect the original data
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 8);
 
