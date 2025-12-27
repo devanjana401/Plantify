@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const SERVER_URL = "http://localhost:5000/gardening";
+const SERVER_URL = "https://json-server-ze6o.onrender.com/gardening";
 
 const AdminGardeningKit = () => {
   const navigate = useNavigate();

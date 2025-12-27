@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import axios from "axios";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = "https://json-server-ze6o.onrender.com";
 
 const GardeningKit = () => {
   const { category } = useParams();

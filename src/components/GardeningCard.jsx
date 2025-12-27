@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = "https://json-server-ze6o.onrender.com";
 
 const GardeningCard = ({ item }) => {
     const dispatch = useDispatch();
